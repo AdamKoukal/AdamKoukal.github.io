@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackHole</title>
+    <link rel="icon" type="image/x-icon" href="Ikonab2.svg">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav img {
+            width: 100px;
+        }
+
+        nav menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #FF8210;
+        }
+
+        nav #underline {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background: #FF8210;
+            width: 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Section Styles */
+        section {
+            height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        #Home {
+            background-color: black;
+        }
+
+        #AboutUs, #Calculator, #News, #Contact {
+            background-image: url("startestbackground.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        #Contact input, #Contact textarea {
+            width: 80%;
+            max-width: 400px;
+            margin: 10px auto;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #Contact input[type="submit"] {
+            background: #FF8210;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* News Section */
+        #FlexNews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .NewsCard {
+            background: black;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            max-width: 300px;
+        }
+
+        .NewsCard img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .NewsCard h3 {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+
+        .NewsCard p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav menu {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            #Contact input, #Contact textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a onclick="Home(1)"><img src="BlackHoleOrangeDarkMode2.svg" alt="Logo"></a>
+            <menu>
+                <a id="aHome" onclick="Home(1)">Home</a>
+                <a id="aAboutUs" onclick="AboutUs(1)">About Us</a>
+                <a id="aCalculator" onclick="Calculator(1)">Calculator</a>
+                <a id="aNews" onclick="News(1)">News</a>
+                <a id="aContact" onclick="Contact(1)">Contact</a>
+                <div id="underline"></div>
+            </menu>
+        </nav>
+    </header>
+
+    <div id="Page">
+        <section id="Home">
+            <h2>Interesting facts about blackholes</h2>
+            <p>The famous black hole TON 618 is not the largest black hole</p>
+            <video src="BH_AccretionDisk_Sim_Stationary_1080.mp4" loop muted autoplay></video>
+        </section>
+
+        <section id="AboutUs">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi iure dolorem quos...</p>
+            <img src="tym.webp" alt="Team Image" style="width: 300px; margin: 20px auto;">
+        </section>
+
+        <section id="Calculator">
+            <h2>Calculator</h2>
+            <p>Under construction</p>
+        </section>
+
+        <section id="News">
+            <h2>News</h2>
+            <div id="FlexNews">
+                <div class="NewsCard">
+                    <img src="https://orrery-media.s3.amazonaws.com/attr/2024-10/asteroids.jpg" alt="News">
+                    <h3>Blackhole Discovery</h3>
+                    <p>Exciting developments in astrophysics...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Contact">
+            <h2>Contact</h2>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Message"></textarea>
+            <input type="submit" value="Send">
+        </section>
+    </div>
+
+    <script>
+        // Navigation Scroll and Underline Animation
+        function updateUnderline(target) {
+            const underline = document.getElementById("underline");
+            const element = document.getElementById(target);
+            const rect = element.getBoundingClientRect();
+            underline.style.width = `${rect.width}px`;
+            underline.style.left = `${rect.left}px`;
+        }
+
+        function Home() {
+            document.getElementById("Home").scrollIntoView({ behavior: "smooth" });
+            updateUnderline("aHome");
+        }
+
+        function AboutUs() {
+            document.getElementById("AboutUs").scrollIntoView({ behavior: "smooth" });
+            updateUnderline("aAboutUs");
+        }
+
+        function Calculator() {
+            document.getElementById("Calculator").scrollIntoView({ behavior: "smooth" });
+            updateUnderline("aCalculator");
+        }
+
+        function News() {
+            document.getElementById("News").scrollIntoView({ behavior: "smooth" });
+            updateUnderline("aNews");
+        }
+
+        function Contact() {
+            document.getElementById("Contact").scrollIntoView({ behavior: "smooth" });
+            updateUnderline("aContact");
+        }
+
+        // Initialize on page load
+        document.addEventListener("DOMContentLoaded", () => {
+            Home();
+        });
+    </script>
+</body>
+</html>

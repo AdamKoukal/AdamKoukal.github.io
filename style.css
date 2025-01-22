@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+    
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+
+
+@font-face{
+    font-family: Kepler296;
+    src:url("Kepler\ 296\ \(Personal\ use\).otf")
+}
+
+
