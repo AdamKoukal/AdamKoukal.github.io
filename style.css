@@ -1,0 +1,452 @@
+body{
+    background-color: black;
+    
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+
+
+@font-face{
+    font-family: Kepler296;
+    src:url("Fonts/Kepler\ 296\ \(Personal\ use\).otf")
+}
+@font-face {
+    font-family: FuturaPtLight;
+    src: url("Fonts/FuturaPTLight.otf");
+}
+html{
+    overflow: hidden;
+}
+
+
+#Home p{
+    margin:0;
+    font-family: Kepler296;
+    color:white;
+    margin-left: 67px;
+    margin-top:100px;
+    font-size: 55px;
+    width: 650px;
+    margin-right: 65px;
+    
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+video{
+  width: 1600px;
+  float:right;
+  margin-right:-300px;
+  margin-top: -380px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+#Page{
+    scroll-behavior: smooth;
+    height: 100vh;  
+}
+section{
+    
+    margin:0;
+    scroll-snap-align:start;
+    height: 100vh;
+    
+
+}
+
+header{
+pointer-events: none;
+width: 100%;
+position: fixed;
+background-color: rgba(0, 0, 0, 0.514);
+backdrop-filter: blur(10px);
+transform: none;
+z-index: 2;
+}
+header nav{
+    pointer-events:all;
+    text-align: right;
+    margin-right: 50px;
+}
+header nav #logo{
+    position: absolute;
+    top:15px;
+    left: 70px;
+}
+header nav #Menu{
+    position: absolute;
+    top:28.5px;
+    right: 65px;
+    visibility: hidden;
+
+}
+header nav menu{
+    margin-top:29.5px;
+    
+}
+header nav menu a{
+    font-family: kepler296;
+    font-size: 20px;
+    margin:0px 5px;
+
+}
+menu{
+    margin-right: 20px;
+}
+
+.NewsCard{
+    margin-top: 50px;
+    height: 502px;
+    min-width: 303px;
+    max-width: 303px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+.NewsCard .animate{
+    flex-shrink: 0;
+}
+#FlexNews{
+    max-height: 620px;
+    overflow: hidden;
+    margin-left: 60px;
+    margin-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+menu #underline{
+    border-radius: 16px;
+    background-color: #FF8210;
+    width: 67px;
+    height: 5px;
+    transition: 0.5s;   
+    position: absolute;
+    right:467px;
+    width: 59.5px;
+    margin-top:-3px
+}
+
+h2{
+    font-family: FuturaPtLight;
+    margin:0;
+    color:white;
+    padding-top:140px;
+    margin-left: 65px;
+    font-size:45px;
+    font-weight: lighter;
+    box-sizing: border-box;
+    margin-right: 65px;
+}
+
+#AboutUs p{
+    color:white;
+    font-family: Kepler296;
+    margin-left: 65px;
+    width: 500px;
+    line-height: 150%;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-right: 65px;
+
+}
+
+#AboutUs img{
+    width: 400px;
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-right: 65px;
+    float: right;
+}
+
+#Calculator input{
+    background-color: white;
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: block;
+    border:none;
+    border: 4px solid #FF8210;
+    border-radius: 6px;
+    background-color: black;
+    width: 400px;
+    height: 40px;
+    margin-left: 67px;
+    color:white;
+    padding-left:5px;
+    font-family: arial;
+}
+#Calculator span{
+    display: block;
+    margin-top:65px;
+    color:white;
+    margin-left: 67px;
+    font-family: Kepler296;
+}
+
+#Calculator p{
+    color:white;
+    font-family: Kepler296;
+    margin-left: 65px;
+    margin-right: 65px;
+
+}
+
+#Contact input,textarea{
+    background-color: white;
+    box-sizing: border-box;
+    margin-top: 10px;
+    display: block;
+    border:none;
+    border: 4px solid #FF8210;
+    border-radius: 6px;
+    background-color: black;
+    width: 400px;
+    height: 40px;
+    margin-left: 67px;
+    color:white;
+    padding-left:5px;
+    font-family: arial;
+    
+}
+
+#Contact textarea{
+    resize: none;
+    height: 150px;
+    padding-top: 5px;
+    
+}
+#Contact span{
+    color:white;
+    margin-left: 67px;
+    font-family: Kepler296;
+}
+ 
+input::placeholder,textarea::placeholder{
+    color: rgb(162, 162, 162);
+    
+}
+#Contact :nth-child(2){
+    display: block;
+    margin-top: 65px;
+}
+
+#Page input[type=submit]:hover{
+    background: rgb(138, 92, 5);
+}
+
+input[type=submit]:hover{
+    transition: 0.3s;
+}
+#Contact p{
+    color:white;
+    font-size: 40px;
+    font-family: kepler296;
+    margin: 0;
+    margin-right: 50px;
+    
+    
+    
+}
+ input:focus,textarea:focus{
+    outline: none;
+}
+
+#Quote #Autor{
+    font-size: 20px;
+    text-align: right;
+    margin:0;
+    margin-right: 50px;
+}
+#Quote{
+    margin:0;
+    margin-left: 750px;
+    margin-top: -380px;    
+}
+#Quote #Motivation{
+    margin-top:50px;
+}
+
+
+
+
+#Home{
+height:140vh;
+background-color: black;
+
+}
+#AboutUs{
+background-color: black;
+background-image: url("Content/startestbackground.png");
+}
+#Calculator{
+background-color: black;
+background-image: url("Content/startestbackground.png");
+}
+#News{
+background-color: black;
+background-image: url("Content/startestbackground.png");
+}
+#Contact{
+background-color: black;
+background-image: url("Content/startestbackground.png");
+}
+
+
+
+
+
+::selection{
+    
+  background-color: #FF8210;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 760px) {
+    menu #underline{
+        visibility: hidden;
+    }
+    #FlexNews{
+        margin-right: 0px;
+    }
+    #Home p{
+    font-size: 40px;
+    box-sizing: content-box;
+    width:auto;
+    }
+    #AboutUs img{
+        width: 250px;
+        float: left;
+        margin-left: 65px;
+    }
+    #AboutUs p{
+        font-size:15px;
+        width: auto;
+        margin-top: 330px;
+    }
+    header nav #Menu{
+    position: absolute;
+    top:28.5px;
+    right: 65px;
+    visibility: visible;
+    }
+    menu a{
+        display: block;
+    }
+    
+    menu{
+        visibility: hidden;
+        
+        padding-top: 35px;
+        
+    }
+    header{
+        
+        height: 80px;
+    }
+
+    #Calculator input{
+        width: 70%;
+    }
+
+    #Contact :nth-child(2){
+        margin-top: 10px;
+    }
+    #Contact input, textarea{
+        width: 70%;
+    }
+    #Contact textarea{
+        height: 100px;
+    }
+    #Quote{
+        margin: 0;
+        float:left
+        
+    }
+    #Quote p{
+        width: 70vw;
+        margin-top:25px;
+        margin-left: 65px;
+        font-size:18px;
+    }
+    #Quote #Autor{
+        margin-left: 165px;
+        margin: 0;
+        font-size: 14px;
+        padding: 0;
+    }
+    #Quote #Motivation{
+        margin-top:20px;
+    }
+    
+
+}
+@media only screen and (min-width: 761px) {
+
+    menu a{
+        visibility: visible;
+    }  
+    menu #underline{
+        visibility: visible;
+    } 
+    menu #underline{
+    border-radius: 16px;
+    background-color: #FF8210;
+    width: 67px;
+    height: 5px;
+    transition: 0.5s;   
+    position: absolute;
+    right:467px;
+    width: 59.5px;
+    margin-top:-3px
+}
+#Quote p{
+    font-size: 30px;
+}
+
+}
+
+@media only screen and (min-width: 1201px) {
+
+    menu a{
+        visibility: visible;
+    }  
+    menu #underline{
+        visibility: visible;
+    } 
+    menu #underline{
+    border-radius: 16px;
+    background-color: #FF8210;
+    width: 67px;
+    height: 5px;
+    transition: 0.5s;   
+    position: absolute;
+    right:467px;
+    width: 59.5px;
+    margin-top:-3px
+}
+#Quote p{
+    font-size: 40px;
+}
+
+}
+
