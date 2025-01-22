@@ -16,10 +16,10 @@
             <a onclick="MobileMenu()"><img id="Menu" src="menu.png" width="30px" alt=""></a>
             <menu id="menubar">
             <a id ="aHome" onclick="Home(1)">Home</a>
-            <a id ="aAboutUs" onclick="AboutUs(1)">About Us</a>
-            <a id ="aCalculator" onclick="Calculator(1)">Calculator</a>
-            <a id ="aNews" onclick="News(1)">News</a>
-            <a id ="aContact" onclick="Contact(1)">Contact</a>
+<a id ="aAboutUs" onclick="AboutUs(1)">About Us</a>
+<a id ="aCalculator" onclick="Calculator(1)">Calculator</a>
+<a id ="aNews" onclick="News(1)">News</a>
+<a id ="aContact" onclick="Contact(1)">Contact</a>
             <div id="underline"></div>
         </menu>
 
@@ -163,10 +163,12 @@
     <style>
 
 html{
+    white-space-collapse: normal;
     overflow: hidden;
 }
 
 #Home h1{
+    
     margin:0;
     position: relative;
     font-family: Futura PT;
@@ -271,7 +273,7 @@ menu{
     flex-shrink: 0;
 }
 #FlexNews{
-    max-height: 650px;
+    max-height: 620px;
     overflow: hidden;
     margin-left: 60px;
     margin-right: 60px;
@@ -327,6 +329,7 @@ h2{
 }
 
 #Contact input,textarea{
+    background-color: white;
     box-sizing: border-box;
     margin-top: 10px;
     display: block;
@@ -367,7 +370,7 @@ h2{
     background: rgb(138, 92, 5);
 }
 
-#Contact input[type=submit]{
+#Contact input[type=submit]:hover{
     transition: 0.3s;
 }
 #Contact p{
@@ -444,7 +447,6 @@ background-image: url("startestbackground.png");
 
 
 
-@import url("Kepler\ 296\ \(Personal\ use\).otf");
 
 @media only screen and (max-width: 760px) {
     menu #underline{
@@ -487,8 +489,34 @@ background-image: url("startestbackground.png");
         
         height: 80px;
     }
+    #Contact :nth-child(2){
+        margin-top: 10px;
+    }
     #Contact input, textarea{
-
+        width: 70%;
+    }
+    #Contact textarea{
+        height: 100px;
+    }
+    #Quote{
+        margin: 0;
+        float:left
+        
+    }
+    #Quote p{
+        width: 70vw;
+        margin-top:25px;
+        margin-left: 65px;
+        font-size:18px;
+    }
+    #Quote #Autor{
+        margin-left: 165px;
+        margin: 0;
+        font-size: 14px;
+        padding: 0;
+    }
+    #Quote #Motivation{
+        margin-top:20px;
     }
     
 
@@ -518,7 +546,14 @@ background-image: url("startestbackground.png");
     </style>
 <script>
      //document.getElementById("Home").scrollIntoView({behavior:"smooth"})
+     
    
+
+
+
+
+
+
 var IsScrolling=false
 var wheel=1
 
